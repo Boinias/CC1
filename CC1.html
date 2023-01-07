@@ -59,14 +59,19 @@ const jonas = {
     birthYear: 1991,
     job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+    hasDriversLicense: false,
     ageCalced: function () {
         this.age = 2037 - this.birthYear;
         return (this.age);
+    },
+    summary: function () {
+        let hello = `${this.firstName} is a ${this.ageCalced()}-year old ${this.job} and he has ${this.hasDriversLicense == true ? "a" : "no"} driver's license`;
+        return (hello);
     }
-};
+}
 
-console.log (jonas.ageCalced)
+
+console.log (jonas.summary());
     </script>
 </body>
 </html>
