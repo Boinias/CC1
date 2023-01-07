@@ -7,9 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="billFunc ()">Click me to calculate tip</button>
     <script>
 
-        
+/*Calculating tip using input and creating an output in console*/
+let bill;
+
+        function billFunc () {
+            bill = prompt("Please type in bill")
+            readOut ()
+        }
+
+        function readOut () {
+const total = bill >= 50 && bill <= 300 ? bill*1.15 * 10 / 10 : bill*1.2 * 10 / 10;
+let tipReadOut = bill >= 50 && bill <= 300 ? ((bill*1.15)-bill * 10 / 10) : ((bill*1.2 * 10 / 10)-bill);
+let result = `The bill was ${bill}, the tip was ${tipReadOut} and the total was ${total}`
+console.log (result)
+        }
+
+
     </script>
 </body>
 </html>
